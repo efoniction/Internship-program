@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1e293b; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .axis-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #334155; }
+    .tick { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #64748b; }
+    .bar-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .bar-text-dark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #1e293b; }
+    .legend { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="8" />
+  
+  <text x="40" y="45" class="title">Correlation Heatmap with Customer Churn</text>
+  <text x="40" y="68" class="subtitle">Pearson correlation coefficients between numeric/encoded customer features and Churn</text>
+
+  <!-- Features list: tenure, MonthlyCharges, SeniorCitizen, Partner, Dependents, PaperlessBilling, Churn -->
+  <!-- Let's render a clean correlation bar rank chart / matrix -->
+  
+  <!-- Horizontal Ranked Correlations with Churn -->
+  <line x1="420" y1="100" x2="420" y2="350" stroke="#475569" stroke-width="1.5" />
+  <line x1="120" y1="350" x2="720" y2="350" stroke="#cbd5e1" stroke-width="1.5" />
+
+  <!-- Ticks -->
+  <text x="120" y="370" text-anchor="middle" class="tick">-0.40</text>
+  <text x="270" y="370" text-anchor="middle" class="tick">-0.20</text>
+  <text x="420" y="370" text-anchor="middle" class="tick">0.00</text>
+  <text x="570" y="370" text-anchor="middle" class="tick">+0.20</text>
+  <text x="720" y="370" text-anchor="middle" class="tick">+0.40</text>
+  <text x="420" y="398" text-anchor="middle" class="axis-label">Correlation Coefficient (r) with Churn</text>
+
+  <!-- Feature 1: tenure (-0.352) -> length = 0.352/0.40 * 300 = 264px to left -->
+  <text x="110" y="132" text-anchor="end" class="axis-label" fill="#1e293b">tenure</text>
+  <rect x="156" y="115" width="264" height="26" fill="#2563eb" rx="4" />
+  <text x="165" y="133" class="bar-text">-0.352 (Protective)</text>
+
+  <!-- Feature 2: Dependents (-0.164) -> length = 0.164/0.40 * 300 = 123px to left -->
+  <text x="110" y="172" text-anchor="end" class="axis-label" fill="#1e293b">Dependents</text>
+  <rect x="297" y="155" width="123" height="26" fill="#3b82f6" rx="4" />
+  <text x="306" y="173" class="bar-text">-0.164</text>
+
+  <!-- Feature 3: Partner (-0.150) -> length = 0.150/0.40 * 300 = 112.5px to left -->
+  <text x="110" y="212" text-anchor="end" class="axis-label" fill="#1e293b">Partner</text>
+  <rect x="308" y="195" width="112" height="26" fill="#60a5fa" rx="4" />
+  <text x="317" y="213" class="bar-text">-0.150</text>
+
+  <!-- Feature 4: SeniorCitizen (+0.151) -> length = 0.151/0.40 * 300 = 113px to right -->
+  <text x="110" y="252" text-anchor="end" class="axis-label" fill="#1e293b">SeniorCitizen</text>
+  <rect x="420" y="235" width="113" height="26" fill="#fb923c" rx="4" />
+  <text x="430" y="253" class="bar-text">+0.151</text>
+
+  <!-- Feature 5: PaperlessBilling (+0.192) -> length = 0.192/0.40 * 300 = 144px to right -->
+  <text x="110" y="292" text-anchor="end" class="axis-label" fill="#1e293b">PaperlessBilling</text>
+  <rect x="420" y="275" width="144" height="26" fill="#f97316" rx="4" />
+  <text x="430" y="293" class="bar-text">+0.192</text>
+
+  <!-- Feature 6: MonthlyCharges (+0.193) -> length = 0.193/0.40 * 300 = 145px to right -->
+  <text x="110" y="332" text-anchor="end" class="axis-label" fill="#1e293b">MonthlyCharges</text>
+  <rect x="420" y="315" width="145" height="26" fill="#ef4444" rx="4" />
+  <text x="430" y="333" class="bar-text">+0.193 (Risk factor)</text>
+  
+</svg>

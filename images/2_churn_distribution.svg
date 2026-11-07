@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1e293b; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .axis-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #334155; }
+    .tick { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #64748b; }
+    .bar-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .bar-text-dark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #1e293b; }
+    .legend { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="8" />
+  
+  <text x="40" y="45" class="title">Overall Customer Churn Distribution</text>
+  <text x="40" y="68" class="subtitle">Target Variable Balance (Total Customers: 7,043)</text>
+
+  <!-- Donut representation using arcs -->
+  <g transform="translate(260, 230)">
+    <!-- Retained Slice 73.46% (angle: ~264.5 deg) -->
+    <!-- Using SVG circle stroke-dasharray trick -->
+    <circle r="110" cx="0" cy="0" fill="transparent" stroke="#2563eb" stroke-width="65" stroke-dasharray="507 691" transform="rotate(-90)" />
+    <!-- Churned Slice 26.54% (angle: ~95.5 deg) -->
+    <circle r="110" cx="0" cy="0" fill="transparent" stroke="#f97316" stroke-width="65" stroke-dasharray="184 691" stroke-dashoffset="-507" transform="rotate(-90)" />
+    
+    <text x="0" y="-8" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#1e293b">7,043</text>
+    <text x="0" y="16" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#64748b">Total Accounts</text>
+  </g>
+
+  <!-- Legend & Callouts -->
+  <g transform="translate(480, 150)">
+    <rect x="0" y="0" width="20" height="20" fill="#2563eb" rx="4" />
+    <text x="32" y="15" class="legend" font-size="14" font-weight="bold">Retained (No): 5,174 (73.5%)</text>
+    <text x="32" y="35" class="tick">Active customers continuing their subscriptions</text>
+
+    <rect x="0" y="70" width="20" height="20" fill="#f97316" rx="4" />
+    <text x="32" y="85" class="legend" font-size="14" font-weight="bold">Churned (Yes): 1,869 (26.5%)</text>
+    <text x="32" y="105" class="tick">Customers who terminated service in the last month</text>
+    
+    <rect x="0" y="145" width="240" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+    <text x="12" y="168" class="tick" font-weight="bold" fill="#334155">Class Imbalance Ratio: ~2.8 : 1</text>
+    <text x="12" y="188" class="tick">Baseline churn probability = 26.54%</text>
+  </g>
+  
+</svg>

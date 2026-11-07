@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1e293b; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .axis-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #334155; }
+    .tick { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #64748b; }
+    .bar-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .bar-text-dark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #1e293b; }
+    .legend { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="8" />
+  
+  <text x="40" y="45" class="title">Customer Tenure vs. Churn Vulnerability</text>
+  <text x="40" y="68" class="subtitle">Distribution of customer account lifetime (months) separated by churn outcome</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="320" x2="720" y2="320" stroke="#cbd5e1" stroke-width="1.5" />
+  <line x1="80" y1="100" x2="80" y2="320" stroke="#cbd5e1" stroke-width="1.5" />
+
+  <!-- X ticks -->
+  <text x="80" y="340" text-anchor="middle" class="tick">0 mo</text>
+  <text x="186" y="340" text-anchor="middle" class="tick">12 mo</text>
+  <text x="293" y="340" text-anchor="middle" class="tick">24 mo</text>
+  <text x="400" y="340" text-anchor="middle" class="tick">36 mo</text>
+  <text x="506" y="340" text-anchor="middle" class="tick">48 mo</text>
+  <text x="613" y="340" text-anchor="middle" class="tick">60 mo</text>
+  <text x="720" y="340" text-anchor="middle" class="tick">72 mo</text>
+  <text x="400" y="375" text-anchor="middle" class="axis-label">Tenure (Months with Company)</text>
+
+  <!-- Churned (Red) - Huge spike at 0-6 months, rapid decay -->
+  <path d="M 80,105 Q 110,130 186,240 T 350,285 T 520,305 T 720,315" fill="none" stroke="#ef4444" stroke-width="3" />
+  <path d="M 80,105 Q 110,130 186,240 T 350,285 T 520,305 T 720,315 L 720,320 L 80,320 Z" fill="#ef4444" fill-opacity="0.18" />
+
+  <!-- Retained (Blue) - Consistent across tenure with surge at high loyalty 65-72 months -->
+  <path d="M 80,260 Q 140,240 250,250 T 450,240 T 620,200 T 720,110" fill="none" stroke="#2563eb" stroke-width="3" />
+  <path d="M 80,260 Q 140,240 250,250 T 450,240 T 620,200 T 720,110 L 720,320 L 80,320 Z" fill="#2563eb" fill-opacity="0.12" />
+
+  <!-- Critical Danger Zone Marker -->
+  <rect x="80" y="90" width="106" height="230" fill="#fecaca" fill-opacity="0.25" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,4" />
+  <text x="133" y="80" text-anchor="middle" class="tick" fill="#b91c1c" font-weight="bold">Danger Zone (Year 1)</text>
+
+  <!-- Legend -->
+  <g transform="translate(450, 75)">
+    <rect x="0" y="0" width="250" height="75" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+    <line x1="15" y1="25" x2="40" y2="25" stroke="#ef4444" stroke-width="3" />
+    <text x="50" y="29" class="legend">Churned (Median: 10 mos)</text>
+    <line x1="15" y1="52" x2="40" y2="52" stroke="#2563eb" stroke-width="3" />
+    <text x="50" y="56" class="legend">Retained (Median: 38 mos)</text>
+  </g>
+  
+</svg>

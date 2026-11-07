@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1e293b; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .axis-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #334155; }
+    .tick { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #64748b; }
+    .bar-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .bar-text-dark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #1e293b; }
+    .legend { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="8" />
+  
+  <text x="40" y="45" class="title">Tech Support Protection: Churn Rate Across Internet Services</text>
+  <text x="40" y="68" class="subtitle">Does the presence of Tech Support mitigate churn for high-risk Fiber Optic and DSL lines?</text>
+
+  <!-- Grid -->
+  <line x1="80" y1="320" x2="720" y2="320" stroke="#cbd5e1" stroke-width="1.5" />
+  <line x1="80" y1="260" x2="720" y2="260" class="grid" />
+  <line x1="80" y1="200" x2="720" y2="200" class="grid" />
+  <line x1="80" y1="140" x2="720" y2="140" class="grid" />
+
+  <!-- Y Ticks -->
+  <text x="70" y="324" text-anchor="end" class="tick">0%</text>
+  <text x="70" y="264" text-anchor="end" class="tick">20%</text>
+  <text x="70" y="204" text-anchor="end" class="tick">40%</text>
+  <text x="70" y="144" text-anchor="end" class="tick">60%</text>
+  <text x="35" y="210" transform="rotate(-90, 35, 210)" text-anchor="middle" class="axis-label">Churn Rate (%)</text>
+
+  <!-- DSL: No Tech Support (29.5%) vs Has Tech Support (10.5%) -->
+  <rect x="130" y="231" width="55" height="89" fill="#ef4444" rx="4" />
+  <text x="157" y="222" text-anchor="middle" class="bar-text-dark">29.5%</text>
+  
+  <rect x="195" y="288" width="55" height="32" fill="#10b981" rx="4" />
+  <text x="222" y="279" text-anchor="middle" class="bar-text-dark">10.5%</text>
+  
+  <text x="190" y="345" text-anchor="middle" class="axis-label">DSL Internet</text>
+
+  <!-- Fiber Optic: No Tech Support (49.4%) vs Has Tech Support (33.5%) -->
+  <rect x="330" y="172" width="55" height="148" fill="#ef4444" rx="4" />
+  <text x="357" y="163" text-anchor="middle" class="bar-text-dark" font-weight="bold">49.4%</text>
+  
+  <rect x="395" y="220" width="55" height="100" fill="#10b981" rx="4" />
+  <text x="422" y="211" text-anchor="middle" class="bar-text-dark">33.5%</text>
+  
+  <text x="390" y="345" text-anchor="middle" class="axis-label">Fiber Optic Internet</text>
+
+  <!-- No Internet: (7.4%) -->
+  <rect x="545" y="298" width="70" height="22" fill="#64748b" rx="4" />
+  <text x="580" y="289" text-anchor="middle" class="bar-text-dark">7.4%</text>
+  <text x="580" y="345" text-anchor="middle" class="axis-label">No Internet Service</text>
+
+  <!-- Legend -->
+  <g transform="translate(480, 80)">
+    <rect x="0" y="0" width="18" height="18" fill="#ef4444" rx="3" />
+    <text x="26" y="14" class="legend">No Tech Support</text>
+    <rect x="0" y="26" width="18" height="18" fill="#10b981" rx="3" />
+    <text x="26" y="40" class="legend">With Tech Support</text>
+  </g>
+  
+</svg>

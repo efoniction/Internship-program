@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1e293b; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #64748b; }
+    .axis-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #334155; }
+    .tick { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #64748b; }
+    .bar-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .bar-text-dark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #1e293b; }
+    .legend { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #334155; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="8" />
+  
+  <text x="40" y="45" class="title">Distribution of Monthly Charges: Churned vs Retained</text>
+  <text x="40" y="68" class="subtitle">Kernel density curve of MonthlyCharges ($) segmented by customer churn outcome</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="320" x2="720" y2="320" stroke="#cbd5e1" stroke-width="1.5" />
+  <line x1="80" y1="100" x2="80" y2="320" stroke="#cbd5e1" stroke-width="1.5" />
+
+  <!-- X ticks -->
+  <text x="80" y="340" text-anchor="middle" class="tick">$20</text>
+  <text x="210" y="340" text-anchor="middle" class="tick">$40</text>
+  <text x="340" y="340" text-anchor="middle" class="tick">$60</text>
+  <text x="470" y="340" text-anchor="middle" class="tick">$80</text>
+  <text x="600" y="340" text-anchor="middle" class="tick">$100</text>
+  <text x="720" y="340" text-anchor="middle" class="tick">$120</text>
+  <text x="400" y="375" text-anchor="middle" class="axis-label">Monthly Charges ($)</text>
+
+  <!-- Curve: Retained (Blue) - Bimodal peak at $20 and around $80 -->
+  <path d="M 80,140 Q 110,120 145,210 T 250,280 T 360,265 T 480,240 T 600,230 T 710,320" fill="none" stroke="#2563eb" stroke-width="3" />
+  <path d="M 80,140 Q 110,120 145,210 T 250,280 T 360,265 T 480,240 T 600,230 T 710,320 L 710,320 L 80,320 Z" fill="#2563eb" fill-opacity="0.12" />
+
+  <!-- Curve: Churned (Red/Orange) - Low at $20, major heavy peak at $70-$100 -->
+  <path d="M 80,305 Q 120,300 210,290 T 340,250 T 470,130 T 570,145 T 710,320" fill="none" stroke="#ef4444" stroke-width="3" />
+  <path d="M 80,305 Q 120,300 210,290 T 340,250 T 470,130 T 570,145 T 710,320 L 710,320 L 80,320 Z" fill="#ef4444" fill-opacity="0.15" />
+
+  <!-- Median lines -->
+  <line x1="368" y1="120" x2="368" y2="320" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="368" y="112" text-anchor="middle" class="tick" fill="#2563eb" font-weight="bold">Retained Median: $64.43</text>
+
+  <line x1="468" y1="95" x2="468" y2="320" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="468" y="88" text-anchor="middle" class="tick" fill="#ef4444" font-weight="bold">Churned Median: $79.65</text>
+
+  <!-- Legend -->
+  <g transform="translate(100, 80)">
+    <line x1="0" y1="10" x2="25" y2="10" stroke="#ef4444" stroke-width="3" />
+    <text x="32" y="14" class="legend">Churned (Mean: $74.44)</text>
+
+    <line x1="0" y1="30" x2="25" y2="30" stroke="#2563eb" stroke-width="3" />
+    <text x="32" y="34" class="legend">Retained (Mean: $61.27)</text>
+  </g>
+  
+</svg>

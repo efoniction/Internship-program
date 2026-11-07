@@ -147,6 +147,3 @@ df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce').fillna(0
 4. **Automated Payment Incentive**: Provide a one-time $10 bill credit for customers switching from manual electronic checks to recurring auto-pay (ACH or credit card).
 
 ---
-
-2018). *Telco Customer Churn*. [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn).
-- **License**: CC0: Public Domain
